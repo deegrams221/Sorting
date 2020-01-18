@@ -1,4 +1,4 @@
-# Resource I used: https://www.geeksforgeeks.org/selection-sort/
+# Resource I used: https://www.geeksforgeeks.org/selection-sort/ <-- helpful flow chart!
 # TO-DO: Complete the selection_sort() function below
 def selection_sort( arr ):
     # loop through n-1 elements
@@ -26,9 +26,19 @@ def selection_sort( arr ):
     return arr
 
 
+# Resource I used: https://www.geeksforgeeks.org/bubble-sort/ <-- helpful visual examples
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    bubbles = len(arr)
 
+    # iterate throught each element
+    for i in range(bubbles):
+        # last i element in place
+        for j in range(0, bubbles-i-1):
+            # iterate through array from 0 to bubbles-i-1
+            if arr[j] > arr[j+1]:
+                # swap
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
 
