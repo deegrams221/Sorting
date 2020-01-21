@@ -28,19 +28,37 @@ def selection_sort( arr ):
 
 # Resource I used: https://www.geeksforgeeks.org/bubble-sort/ <-- helpful visual examples
 # TO-DO:  implement the Bubble Sort function below
+
+# def bubble_sort( arr ):
+#     bubbles = len(arr)
+
+#     # iterate throught each element
+#     for i in range(bubbles):
+#         # last i element in place
+#         for j in range(0, bubbles-i-1):
+#             # iterate through array from 0 to bubbles-i-1, -1 specifies the right index
+#             if arr[j] > arr[j+1]:
+#                 # swap
+#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+    # return arr
+
 def bubble_sort( arr ):
-    bubbles = len(arr)
+    index = 0
+    count = 0
 
-    # iterate throught each element
-    for i in range(bubbles):
-        # last i element in place
-        for j in range(0, bubbles-i-1):
-            # iterate through array from 0 to bubbles-i-1
-            if arr[j] > arr[j+1]:
-                # swap
-                arr[j], arr[j+1] = arr[j+1], arr[j]
+    # while loop
+    while True:
+        count = 0
+        for num in range(0, len(arr) - 1):
+            if arr[num] > arr[num + 1]:
+                value = arr[num]
+                arr[num] = arr[num + 1]
+                arr[num + 1] = value
+                count += 1
+        if count == 0:
+            False
+            break
     return arr
-
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
