@@ -51,9 +51,11 @@ def bubble_sort( arr ):
         count = 0
         for num in range(0, len(arr) - 1):
             if arr[num] > arr[num + 1]:
-                value = arr[num]
-                arr[num] = arr[num + 1]
-                arr[num + 1] = value
+                #swap
+                # value = arr[num]
+                # arr[num] = arr[num + 1]
+                # arr[num + 1] = value
+                arr[num], arr[num + 1] = arr[num+1], arr[num]
                 count += 1
         if count == 0:
             False
